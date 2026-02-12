@@ -14,8 +14,6 @@ h3 {
 }
 
 .nav-link {
-
-
     padding: 10px 20px;
     position: relative;
     display: inline-block;
@@ -41,6 +39,16 @@ h3 {
 }
 
 .nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Active State Styling */
+.navbar-nav .nav-link.active {
+    color: #a71d2a;
+}
+
+.navbar-nav .nav-link.active::before {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -144,7 +152,6 @@ h3 {
     object-fit: cover;
 }
 
-
 .service-item .icon i,
 .service-item .icon img {
 
@@ -156,7 +163,6 @@ h3 {
 .service-item:hover .icon img {
     animation: spin 0.8s ease-in-out;
 }
-
 
 @-webkit-keyframes spin {
     from {
@@ -182,7 +188,6 @@ h3 {
     }
 }
 
-
 .custom-cursor {
     width: 25px;
     height: 25px;
@@ -200,9 +205,9 @@ h3 {
     mix-blend-mode: difference;
     /* Inverts color based on background for high visibility */
     transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .cursor-text {
+}
+
+.cursor-text {
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -210,19 +215,16 @@ h3 {
     color: #000;
     opacity: 0;
     transition: opacity 0.2s ease;
-  }
-  
-  /* State when hovering over cards */
-  .custom-cursor.active {
+}
+
+/* State when hovering over cards */
+.custom-cursor.active {
     width: 80px;
     height: 80px;
     background-color: #fff;
     mix-blend-mode: normal;
-    /* Changes back to solid for text readability */
-  }
-  
-  .custom-cursor.active .cursor-text {
+}
+
+.custom-cursor.active .cursor-text {
     opacity: 1;
-  }
-  
-  
+}
