@@ -181,3 +181,48 @@ h3 {
         transform: rotateY(-360deg);
     }
 }
+
+
+.custom-cursor {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    /* Essential: allows clicking through the cursor */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: difference;
+    /* Inverts color based on background for high visibility */
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cursor-text {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  /* State when hovering over cards */
+  .custom-cursor.active {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    mix-blend-mode: normal;
+    /* Changes back to solid for text readability */
+  }
+  
+  .custom-cursor.active .cursor-text {
+    opacity: 1;
+  }
+  
+  
